@@ -1,0 +1,24 @@
+<h2>Colores</h2>
+
+<div [formGroup]="form">
+    <div>
+        <label for="">Rojo</label>
+        <input type="text" formControlName="rojo">
+    </div>
+    <div>
+        <label for="">Verde</label>
+        <input type="text" formControlName="verde">
+    </div>
+    <div>
+        <label for="">Azul</label>
+        <input type="text" formControlName="azul">
+    </div>
+    <button (click)="agregarColor()">Agregar color</button>
+
+    @for (color of data; track $index) {
+        <div style="margin-top: 10px; display: flex; flex-direction: row;">
+            <div style="height: 20px; width: 50px; margin-right: 10px; background-color: {{ color }};"></div>
+            <span>{{ color }}</span>
+        </div>
+    }
+</div>

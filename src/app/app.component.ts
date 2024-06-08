@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lab6';
+  route = inject(Router);
+
+  goCalculadora() {
+    this.route.navigateByUrl('/calculadora');
+  }
+
+  goColores() {
+    this.route.navigateByUrl('/colores');
+  }
 }

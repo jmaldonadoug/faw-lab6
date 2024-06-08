@@ -1,0 +1,19 @@
+<h2>Calculadora</h2>
+
+<div [formGroup]="form">
+    <div>
+        <label for="">Operando 1</label>
+        <input type="number" formControlName="num1" name="num1">
+    </div>
+    <div>
+        <label for="">Operando 2</label>
+        <input type="number" formControlName="num2" name="num2">
+    </div>
+    <div>
+        <button (click)="sumar()">Suma</button>
+        <button (click)="restar()">Resta</button>
+        <button (click)="multiplicar()">Multi</button>
+        <button (click)="dividir()">Divi</button>
+        <button (click)="potencia()">Pote</button>
+    </div>
+</div>
